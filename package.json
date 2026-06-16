@@ -1,35 +1,13 @@
 {
-  "type": "module",
+  "name": "mi-sitio-informativo",
   "scripts": {
-    "dev": "wrangler dev src/index.ts",
-    "format": "prettier --write .",
-    "lint": "eslint ./src",
-    "types": "tsc --noEmit",
-    "deploy": "wrangler deploy --minify src/index.ts",
-    "db:generate": "drizzle-kit generate",
-    "db:upgrade": "drizzle-kit up",
-    "db:studio": "drizzle-kit studio",
-    "db:migrate": "npx wrangler d1 migrations apply workers-hono-api-example --local",
-    "db:migrate:prod": "npx wrangler d1 migrations apply workers-hono-api-example --remote"
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
   },
   "dependencies": {
-    "@hono/swagger-ui": "^0.5.1",
-    "@hono/zod-openapi": "^0.19.2",
-    "@lucia-auth/adapter-sqlite": "^3.0.2",
-    "drizzle-orm": "^0.41.0",
-    "hono": "^4.7.5",
-    "lucia": "^3.2.2",
-    "oslo": "^1.2.1",
-    "zod": "^3.24.2"
+    "hono": "^4.6.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250327.0",
-    "@typescript-eslint/eslint-plugin": "^7.4.0",
-    "@typescript-eslint/parser": "^7.4.0",
-    "better-sqlite3": "^11.9.1",
-    "drizzle-kit": "^0.30.6",
-    "eslint": "^8.57.0",
-    "prettier": "3.5.3",
-    "wrangler": "^4.6.0"
+    "wrangler": "^3.0.0"
   }
 }
